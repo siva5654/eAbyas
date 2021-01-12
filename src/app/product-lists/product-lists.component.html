@@ -1,0 +1,22 @@
+<div class="" >
+  <div class="" style="text-align:right">
+    <input class="form-control inpu" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"/>
+
+  </div>
+  <ul class="row">
+    <li *ngFor='let video of videos | filter:searchText |paginate: { itemsPerPage: 6, currentPage: p }' class="col-sm-12 col-md-4" >
+      <div  class="parent">
+        <div class="img-container">
+          <p><img src="{{video.thumbnail}}" alt="{{video.title}}" style="max-width:100%"></p>
+          <span class="duration">{{video.duration}}</span>
+        </div>
+        <div class="text-content">
+          <h6 >{{video.title}}</h6>
+          <p style="font-size:12px;">{{video.addedago}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>

@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+
             ],
             "scripts": []
           },
@@ -120,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "eAbyas"
+  "defaultProject": "eAbyas",
+  "cli": {
+    "analytics": "08041abf-624e-4374-8310-ae71cdd8287a"
+  }
 }
